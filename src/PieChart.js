@@ -4,28 +4,29 @@ import * as d3 from "d3";
 function PieChart() {
   var triggerChart = () => {
     var data = [54, 48, 44, 23, 14, 12];
-    var countries = [
-      "Africa",
-      "Asia",
-      "Europe",
-      "North America",
-      "Australia/Oceania",
-      "South America"
-    ];
+    // var countries = [
+    //   "Africa",
+    //   "Asia",
+    //   "Europe",
+    //   "North America",
+    //   "Australia/Oceania",
+    //   "South America"
+    // ];
+    var countries = ["Africa", "Asia", "EU", "NA", "Aus", "SA"];
     var svg = d3
       .select("#PieChart")
       .append("svg")
       .attr("width", "500")
       .attr("height", "500")
       .append("g")
-      .attr("transform", `translate(200,150)`);
+      .attr("transform", `translate(200,250)`);
 
     let g = svg.append("g");
     var pie = d3.pie();
     var arc = d3
       .arc()
       .innerRadius(0)
-      .outerRadius(150);
+      .outerRadius(200);
 
     var arcs = g
       .selectAll("arc")
@@ -55,7 +56,7 @@ function PieChart() {
 
   useEffect(() => {
     triggerChart();
-  });
+  }, []);
   return <div id="PieChart">PieChart</div>;
 }
 export default PieChart;

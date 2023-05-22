@@ -9,7 +9,7 @@ function Bargraph() {
       .attr("width", "1000")
       .attr("height", "500")
       .append("g")
-      .attr("transform", `translate(40,20)`);
+      .attr("transform", `translate(70,20)`);
 
     d3.json("http://localhost:8081/annualIncomeCut.json").then(function(data) {
       console.log(data);
@@ -42,14 +42,14 @@ function Bargraph() {
         .attr("x", d => x(d[0]))
         .attr("y", d => y(d[1]))
         .attr("width", 10)
-        .attr("height", d => 380-y(d[1]))
-        .attr("fill", "#69b3a2");
+        .attr("height", d => 380 - y(d[1]))
+        .attr("fill", "blue");
     });
   };
 
   useEffect(() => {
     triggerChart();
-  });
+  },[]);
 
   return <div id="BarGraph"></div>;
 }

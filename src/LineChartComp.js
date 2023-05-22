@@ -12,7 +12,6 @@ function LineChartComp() {
       .attr("transform", `translate(80,20)`);
 
     d3.json("http://localhost:8081/annualIncome.json").then(function(data) {
-
       const x = d3
         .scaleLinear()
         .domain([1972, 2020])
@@ -51,7 +50,6 @@ function LineChartComp() {
 
     /// Making fetchAnnualIncomeSTEM
     d3.json("http://localhost:8081/annualIncomeSTEM.json").then(function(data) {
-
       const x = d3
         .scaleLinear()
         .domain([1972, 2020])
@@ -92,7 +90,7 @@ function LineChartComp() {
 
   useEffect(() => {
     triggerChart();
-  });
+  }, []);
 
   return <div id="lineChartComp"></div>;
 }

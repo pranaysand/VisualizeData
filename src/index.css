@@ -11,7 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
+#container {
+  margin-left: 325px;
+}
+#AreaChartImp {
+  color: white;
+  float: left;
+  margin-top: 30px;
+}
+#AreaChartImpButtons {
+  float: left;
+  clear: both;
+  margin-left: 95px;
+  border-radius: 12px;
+}
 #lineChartComp g {
   color: white;
 }
@@ -25,4 +38,17 @@ h1 {
 
 #BarGraph {
   color: white;
+}
+
+#guage-grad1 {
+  background-image: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
 }
