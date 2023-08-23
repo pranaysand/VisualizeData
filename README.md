@@ -1,1 +1,1 @@
-Visualization using D3.js. These can be used a as basic templates to append upon.
+Visualization using D3.js. These Templates can be used as boilerplates to append upon.
